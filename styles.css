@@ -1,0 +1,41 @@
+/* styles.css */
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f4f6;
+}
+
+/* Container styles */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Section styles */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    section h2 {
+        color: #333;
+    }
+
+/* Header styles */
+header {
+    background-color: #4a90e2;
+}
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+/* Footer styles */
+footer {
+    background-color: #4a90e2;
+    font-size: 0.875rem;
+}

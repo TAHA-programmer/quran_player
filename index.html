@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-blue-600 text-white text-center py-4">
+        <h1 class="text-3xl font-bold">Quran Player</h1>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="qariList" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Select Qari</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Qari list items will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="surahSelection" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Select Surah</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <!-- Surah selection options will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="audioPlayer" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Audio Player</h2>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <!-- Audio player controls will be added here -->
+            </div>
+        </section>
+
+        <section id="bookmark" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Bookmark</h2>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <!-- Bookmark options will be added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white text-center py-4">
+        <p>&copy; 2024 Quran Player. All rights reserved.</p>
+    </footer>
+    <!-- Include React library -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+    <!-- Include Babel library for JSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Include compiled JavaScript files -->
+    <script src="QariList.js" type="text/babel"></script>
+    <script src="SurahSelection.js" type="text/babel"></script>
+    <script src="AudioPlayer.js" type="text/babel"></script>
+    <script src="Bookmark.js" type="text/babel"></script>
+
+    <!-- Include main App component -->
+    <script src="App.js" type="text/babel"></script>
+
+    <!-- Render the QariList component -->
+    <script type="text/babel">
+        const qaris = [
+          { id: 1, name: 'Qari 1' },
+          { id: 2, name: 'Qari 2' },
+          // Add more qaris as needed
+        ];
+
+        ReactDOM.render(
+          <QariList qaris={qaris} />,
+          document.querySelector('#qariList > .grid')
+        );
+    </script>
+</body>
+</html>
